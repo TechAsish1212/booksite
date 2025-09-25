@@ -10,6 +10,8 @@ import Contact from './pages/Contact.jsx'
 import Header from './components/Header.jsx'
 import Footer from './components/Footer.jsx'
 import Seller from './pages/Seller.jsx'
+import Cart from './pages/Cart.jsx'
+import AddressForm from './pages/AddressForm.jsx'
 
 
 
@@ -26,7 +28,8 @@ const App = () => {
         <Route path='/blog' element={<Blog />} />
         <Route path='/seller' element={<Seller />} />
         <Route path='/contact' element={<Contact />} />
-        <Route path='/contact' element={<Contact />} />
+        <Route path='/cart' element={<Cart />} />
+        <Route path='/address-form' element={<AddressForm />} />
       </Routes>
       <Footer/>
     </main>

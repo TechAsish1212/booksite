@@ -123,7 +123,7 @@ function Header() {
     const [showSearch, setShowSearch] = useState(false);
     const [dropdownOpen, setDropdownOpen] = useState(false);
 
-    const {navigate,user,setUser}=useContext(ShopContext);
+    const { navigate, user, setUser, getCartCount } = useContext(ShopContext);
     const dropdownRef = useRef(null);
 
     const toggleMenu = () => {
@@ -182,11 +182,11 @@ function Header() {
                 </>
 
                 {/* Cart */}
-                <Link>
-                    <div className="bold-16 relative">
+                <Link to={'/cart'} className='flex relative'>
+                    <div className="bold-16">
                         <IoCartOutline className='text-2xl' title='add to cart' />
                         <span className="bg-secondary text-white text-[12px] font-semibold absolute -top-3 -right-3 flex items-center justify-center w-4 h-4 rounded-full">
-                            0
+                            {getCartCount()}
                         </span>
                     </div>
                 </Link>

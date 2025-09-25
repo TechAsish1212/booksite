@@ -3,6 +3,7 @@ import { AiOutlineHome } from "react-icons/ai";
 import { RiShoppingBag3Line } from "react-icons/ri";
 import { RiBloggerLine } from "react-icons/ri";
 import { BsEnvelopeAt } from "react-icons/bs";
+import { BsShop } from "react-icons/bs";
 import { NavLink } from 'react-router-dom';
 
 
@@ -13,7 +14,7 @@ const Navbar = ({ containerStyles, setMenuOpened }) => {
     { to: "/", label: "Home", icon: <AiOutlineHome /> },
     { to: "/shop", label: "Shop", icon: <RiShoppingBag3Line /> },
     { to: "/blog", label: "Blog", icon: <RiBloggerLine /> },
-    { to: "/seller", label: "Seller", icon: <RiBloggerLine /> },
+    { to: "/seller", label: "Seller", icon: <BsShop /> },
     { to: "mailto:infooxibooka.com", label: "contact", icon: <BsEnvelopeAt /> },
   ]
   return (
