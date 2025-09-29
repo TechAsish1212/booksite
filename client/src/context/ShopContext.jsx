@@ -5,13 +5,14 @@ import { dummyBooks } from '../assets/assets'
 export const ShopContext = createContext()
 
 const ShopContextProvider = ({ children }) => {
-  const navigate = useNavigate()
-  const [books, setBooks] = useState([])
-  const [user, setUser] = useState(null);
-  const [searchQuery, setSearchQuery] = useState("")
+  const navigate = useNavigate();
+  const [books, setBooks] = useState([]);
+  const [user, setUser] = useState('');
+  const [searchQuery, setSearchQuery] = useState("");
   const currency = import.meta.env.VITE_CURRENCY;
   const [cartItems, setCartItems] = useState({});
   const [method, setMethod] = useState("COD");
+  const [showUserLogin, setShowUserLogin] = useState("")
   const delivery_charges = 10;
 
   // fetch all books 
@@ -73,7 +74,7 @@ const ShopContextProvider = ({ children }) => {
     fetchBooks()
   }, [])
 
-  const value = { books, navigate, user, setUser, currency, searchQuery, setSearchQuery, cartItems, setCartItems, addToCart, getCartCount, updateQuantity, getCartAmount, method, setMethod, delivery_charges }
+  const value = { books, navigate, user, setUser, currency, searchQuery, setSearchQuery, cartItems, setCartItems, addToCart, getCartCount, updateQuantity, getCartAmount, method, setMethod, delivery_charges, showUserLogin, setShowUserLogin }
   return (
     <ShopContext.Provider value={value}>
       {children}

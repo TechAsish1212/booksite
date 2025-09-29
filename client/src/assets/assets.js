@@ -148,8 +148,8 @@ export const dummyBooks = [
     _id: "3",
     name: "Basics of Chemistry",
     image: [book_3],
-    offeredPrice: 29,
-    price: 10,
+    offeredPrice: 25,
+    price: 35,
     description: "Explore atoms, matter, and reactions in simple steps with visuals and easy chemistry terms.",
     category: "Academic",
     date: 1716634345448,
@@ -160,7 +160,7 @@ export const dummyBooks = [
     _id: "4",
     name: "Tech and Logic Essentials",
     image: [book_4],
-    offeredPrice: 29,
+    offeredPrice: 15,
     price: 25,
     description: "Learn coding basics, algorithms, and problem-solving using fun tasks and clear explanations.",
     category: "Academic",
@@ -172,7 +172,7 @@ export const dummyBooks = [
     _id: "5",
     name: "World Events and Ideas",
     image: [book_5],
-    offeredPrice: 29,
+    offeredPrice: 10,
     price: 15,
     description: "Discover key global events, wars, and changes in a short, simple guide to world history.",
     category: "Academic",
@@ -711,7 +711,7 @@ export const dummyOrders = [
         size: "M",
       },
       {
-        book: dummyBooks[11],
+        book: dummyBooks[3],
         quantity: 2,
         size: "XL",
       },
@@ -730,7 +730,7 @@ export const dummyOrders = [
     paymentMethod: "stripe",
     isPaid: true,
     status: "Delivered",
-    createdAt: "2024-06-10T10:00:00.000Z",
+    createdAt: "2025-09-28T10:00:00.000Z",
   },
 
   {
@@ -738,14 +738,12 @@ export const dummyOrders = [
     userId: "68591d36daf423db94fa8f4f",
     items: [
       {
-        book: dummyBooks[34],
+        book: dummyBooks[4],
         quantity: 2,
-        size: "S",
       },
       {
         book: dummyBooks[8],
         quantity: 2,
-        size: "XXL",
       },
     ],
     address: {
@@ -762,7 +760,7 @@ export const dummyOrders = [
     paymentMethod: "COD",
     isPaid: true,
     status: "Shipped",
-    createdAt: "2024-06-08T15:30:00.000Z",
+    createdAt: "2025-09-30T15:30:00.000Z",
   },
 ];
 

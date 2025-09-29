@@ -123,7 +123,7 @@ function Header() {
     const [showSearch, setShowSearch] = useState(false);
     const [dropdownOpen, setDropdownOpen] = useState(false);
 
-    const { navigate, user, setUser, getCartCount } = useContext(ShopContext);
+    const { navigate, user, setUser, getCartCount,setShowUserLogin } = useContext(ShopContext);
     const dropdownRef = useRef(null);
 
     const toggleMenu = () => {
@@ -198,7 +198,7 @@ function Header() {
                             <img src={userImg} alt="user profile image" height={35} width={35} className='rounded-full' />
                         </div>
                     ) : (
-                        <button className='btn-outline flexCenter gap-x-2'>
+                        <button onClick={()=>setShowUserLogin(true)} className='btn-outline flexCenter gap-x-2'>
                             Login<LuUser className='text-xl' />
                         </button>
                     )}

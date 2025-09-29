@@ -10,6 +10,7 @@ const Item = ({book,fromHero}) => {
     <div 
     onClick={()=>{
       navigate(`/shop/${book.category}/${book._id}`)
+      scrollTo(0,0)
     }} 
     className={`overflow-hidden sm:p-4 ${fromHero ? "bg-white":"sm:bg-primary"} rounded-xl`}>
       {/* image */}
@@ -19,11 +20,11 @@ const Item = ({book,fromHero}) => {
         <div className='pt-4'>
           <div className='flexBetween gap-2'>
             <h4 className='h5 line-clamp-1'>{book.name}</h4>
-            <p className='text-secondary bold-15'>{currency} {book.price}.00</p>
+            <p className='text-secondary bold-15 px-1'>{currency}{book.offeredPrice}</p>
           </div>
           <div className='flex justify-between items-start gap-2 mt-1'>
             <p className='line-clamp-2'>{book.description}</p>
-            <button onClick={(e)=>{addToCart(book._id); e.stopPropagation()}} className=' cursor-pointer'>
+            <button onClick={(e)=>{addToCart(book._id); e.stopPropagation()}} className=' cursor-pointer px-1'>
               <TbShoppingBagPlus className='text-xl'/>
             </button>
           </div>
