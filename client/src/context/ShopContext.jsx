@@ -15,6 +15,9 @@ const ShopContextProvider = ({ children }) => {
   const [showUserLogin, setShowUserLogin] = useState("")
   const delivery_charges = 10;
 
+  // admin
+  const [isAdmin, setIsAdmin] = useState(false);
+
   // fetch all books 
   const fetchBooks = () => {
     setBooks(dummyBooks)
@@ -74,7 +77,7 @@ const ShopContextProvider = ({ children }) => {
     fetchBooks()
   }, [])
 
-  const value = { books, navigate, user, setUser, currency, searchQuery, setSearchQuery, cartItems, setCartItems, addToCart, getCartCount, updateQuantity, getCartAmount, method, setMethod, delivery_charges, showUserLogin, setShowUserLogin }
+  const value = { books, navigate, user, setUser, currency, searchQuery, setSearchQuery, cartItems, setCartItems, addToCart, getCartCount, updateQuantity, getCartAmount, method, setMethod, delivery_charges, showUserLogin, setShowUserLogin, isAdmin, setIsAdmin }
   return (
     <ShopContext.Provider value={value}>
       {children}
